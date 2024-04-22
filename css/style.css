@@ -63,7 +63,7 @@ h6 {
 }
 
 h1 {
-     font-size: 50px;
+     font-size: 25px;
      color: #9D785C;
      font-family: 'Baloo Chettan', cursive;
 }
@@ -114,6 +114,7 @@ ul,
 li,
 ol {
     margin: 0px;
+    width: 100%;
     padding: 0px;
     list-style: none;
 }
@@ -121,7 +122,7 @@ ol {
 p {
     margin: 20px;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 15px;
 }
 
@@ -216,7 +217,6 @@ button {
 /* header section start */
 
 .header_section1 {
-
     width: 100%;
     float: left;
     background: linear-gradient(90deg, #C4A362 55%, #F9E7CF 55%);/*靛黃占比*/
@@ -224,6 +224,11 @@ button {
     background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
+}
+@media (max-width:763px) {
+     .header_section1 {
+     background: linear-gradient(90deg, #C4A362 85%, #F9E7CF 25%);
+     }
 }
 
 .header_bg {
@@ -246,7 +251,8 @@ button {
 }
 /*logo大小*/
 a.navbar-brand {
-    width: 24%;
+    width: 17%;
+    max-width: 120px;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -279,6 +285,7 @@ a.navbar-brand {
     margin: 0px;
     float: right;
     width: 140%;
+
 
 }
 /*左三*/
@@ -331,8 +338,20 @@ a.navbar-brand {
 .banner_taital_main {
     width: 100%;
     float: left;
-    padding-left: 100px;
+    padding: 10px;
+    /* padding-right: 100px; */
 }
+@media (max-width:575px) {
+     .banner_text {
+          margin-right: 12vw;
+     }
+}
+.banner_taital_main {
+     width: 100%;
+     float: left;
+     padding: 10px;
+     /* padding-right: 100px; */
+ }
 
 .banner_taital {
     width: 90%;
@@ -342,13 +361,9 @@ a.navbar-brand {
     font-weight: bold;}
 
 .banner_text {
-    width: 95%;
-    font-size: 25px;/*文案大小*/
+    font-size: 15px;/*文案大小*/
     color: #fefefd;
-    float: left;
-    padding-top: 10px;
-    margin: 0px;
-    line-height:45px;   /* 設定文字行距 */
+    line-height:25px;   /* 設定文字行距 */
     letter-spacing: 3px;/* 設定文字間距 */
 }
 
@@ -592,16 +607,34 @@ p.chunks_text {
     padding: 30px 10px;
     box-shadow: 0px -3px 15px 0px;
 }
-
+.coffee_img{
+     display: flex;
+     justify-content: center;
+}
+@media (min-width:985px) {
+     .coffee_img img{
+          width: 18vw;;
+     }   
+}
+@media (max-width:763px) {
+     .coffee_img img{
+          width: 80vw;;
+     }   
+}
+.coffee_img img{
+     aspect-ratio: 4/3;
+}
 
 /* Zoom In #1 */
 
 .hover01 figure img {
     -webkit-transform: scale(1);
     transform: scale(1);
+    object-fit:cover;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
     min-height: 370px;
+    
 }
 
 .hover01 figure:hover img {
@@ -643,16 +676,18 @@ figure:hover+span {
     width: 100%;
     float: left;
     text-align: center;
+    display: flex;
     color: #001431;
-    font-size: 20px;
-    padding: 0px;
+    font-size: 18px;
+    height: 52px;
     text-transform: uppercase;
-    font-weight: bold;
+    align-items: center;
+    justify-content: center;
 }
 
 .read_bt {
     width: 170px;
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
 }
 
@@ -665,6 +700,7 @@ figure:hover+span {
     text-align: center;
     background-color: #F9E7CF;
     margin-top: 30px;
+    margin-bottom: 30px;
     border-radius: 5px;
     text-transform: uppercase;
 }
@@ -1005,17 +1041,10 @@ textarea#comment::placeholder {
 /* news section end */
 
 
-    font-size: 16px;
-    color: #d78373;
-    text-align: center;
-    border-radius: 5px;
-    border: 1px solid #d78373;
-    text-transform: uppercase;
-    padding: 8px;
-}
 
 .read_bt a:hover {
     color: #3b3b3b;
+    
     border: 1px solid #3b3b3b;
 }
 
@@ -1225,7 +1254,7 @@ textarea#comment::placeholder {
      bottom: -193px;
      right: 1%;
      content: "";
-     background: url(../images/四季背景/夏播放.png); //改圖片
+     background: url(../images/四季背景/夏播放.png); /*改圖片*/
      background-repeat: no-repeat;
      width: 259px;
      /*z-index: 9999;*/
@@ -1247,12 +1276,12 @@ textarea#comment::placeholder {
 }
 
 .text-bg p {
-     line-height: 35px;
+     line-height: 25px;
      font-weight: 500;
      padding-bottom: 0px;
      display: block;
      color: #766355;
-     font-size: 22px;/*內文文字大小*/
+     font-size: 14px;/*內文文字大小*/
 }
 
 .text_img {
@@ -1331,10 +1360,10 @@ textarea#comment::placeholder {
 .titlepage p {
      color: #797777;
      display: block;
-     font-size: 20px;
+     font-size: 14px;
      font-weight: 400;
      line-height: 30px;
-     width: 110%;
+     width: 100%;
 }
 
 
@@ -1428,7 +1457,7 @@ textarea#comment::placeholder {
 }
 
 .photo .titlepage h2 {
-     font-size: 50px;
+     font-size: 17px;
      color: #664024;
      line-height: 55px;
      padding: 0;
@@ -1511,7 +1540,7 @@ textarea#comment::placeholder {
      bottom: -131px;
      right: -155px;
      content: "";
-     background: url(../images/四季背景/夏側.png); //要改
+     background: url(../images/四季背景/夏側.png); /*要改*/
      background-repeat: no-repeat;
      width: 420px;
      height: 100%;
@@ -1525,7 +1554,7 @@ textarea#comment::placeholder {
 .experience .titlepage p {
      color: #797777;
      display: block;
-     font-size: 20px;
+     font-size: 14px;
      font-weight: 400;
      line-height: 45px;
      width: 78%;
@@ -1617,6 +1646,7 @@ textarea#comment::placeholder {
     border: 1px solid #d78373;
     text-transform: uppercase;
     padding: 8px;
+    margin-bottom: 30px;
 }
 
 .read_btC a:hover {
@@ -1882,7 +1912,7 @@ ul.link_menu li a:hover {
      padding: 0px 19px;
      width: 45%;
      height: 45px;
-     background: #fffffff;
+     background: #ffffff;
      color: #ccc8c8;/*粉*/
      font-size: 17px;
      font-weight: 300;
@@ -2036,7 +2066,7 @@ ul.link_menu li a:hover {
 
 .text-bg {
      text-align: left;
-     padding-right: 71px;
+     /* padding-right: 71px; */
 }
 
 .text-bg h1 {
@@ -2047,12 +2077,12 @@ ul.link_menu li a:hover {
 }
 
 .text-bg p {
-     line-height: 35px;
+     line-height: 25px;
      font-weight: 500;
      padding-bottom: 0px;
      display: block;
      color: #766355;
-     font-size: 22px;/*內文文字大小*/
+     font-size: 14px;/*內文文字大小*/
 }
 
 .text_img {
@@ -2143,16 +2173,18 @@ ul.link_menu li a:hover {
 .experienceW .titlepage p {
      color: #797777;
      display: block;
-     font-size: 20px;
-     font-weight: 40px;
-     line-height: 45px;
+     font-size: 14px;
+     font-weight: 400;
+     line-height: 25px;
      width: 78%;
+     position: relative;
+     z-index: 2;
 }
 
 .experienceW .titlepage h2 {
-     font-size: 50px;
+     font-size: 20px;
      color: #664024;
-     line-height: 55px;
+     line-height: 25px;
      padding: 0;
 }
 
@@ -2166,8 +2198,8 @@ ul.link_menu li a:hover {
      background: url(../images/崇正/contact.png);
      background-repeat: no-repeat;
      background-size: 100% 100%;
-     padding: 0px 0 10px 0;/*padding: 0px 0 10px 0;*/
      position: relative;
+     object-fit: cover;
      background: inherit;
 
 }
@@ -2175,8 +2207,6 @@ ul.link_menu li a:hover {
 .contactW::before {
      position: absolute;
      bottom: 0;
-     left: 0;
-     right: 0;
      content: "";
      background: url(../images/四季背景/冬底.png);
      background-repeat: no-repeat;
@@ -2381,7 +2411,7 @@ ul.link_menu li a:hover {
      padding: 0px 19px;
      width: 45%;
      height: 45px;
-     background: #fffffff;
+     background: #ffffff;
      color: #ccc8c8;
      font-size: 17px;
      font-weight: 300;
